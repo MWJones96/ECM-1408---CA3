@@ -29,7 +29,10 @@ if __name__ == "__main__":
         degree = int(args[1])
 
     elif len(args) == 1:
-        word_file = args[0]
+        if args[0].isdigit():
+            degree = int(args[0])
+        else:
+            word_file = args[0]
 
     dictionary = set()
 
